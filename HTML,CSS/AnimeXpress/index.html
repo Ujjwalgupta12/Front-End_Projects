@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnimeXpress</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <a href="index.html">Home</a>
+    <a href="manga.html">Manga</a>
+    <a href="#">Genre</a>
+    <a href="#about">About Us</a>
+    <a href="Services.html">Services</a>
+  </div>
+  
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <button class="burger" onclick="toggleSidebar()">☰</button>
+    <h1 class="logo">Anime<span>Xpress</span></h1>
+    <input type="text" id="searchBar" placeholder="Search Anime..." />
+    <button class="toggle-mode" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Anime<span>Xpress</span></h2>
+      <p>your ultimate hub for everything anime!
+Discover trending titles, classic hits, top-rated gems, and short anime series all in one place. Whether you're a seasoned otaku or just starting your journey, AnimeXpress lets you explore, search, and enjoy anime like never before.</p>
+<p>Stream. Search. Stay Otaku.
+</p>
+    </div>
+  </section>
+
+  <!-- Anime Sections -->
+  <main class="anime-container">
+    <section class="anime-section">
+      <h2></h2>
+      <div class="anime-wrapper">
+        <button class="scroll-btn left" onclick="scrollRow(this, -1)">&#10094;</button>
+        <div class="anime-row">
+          <div class="anime-card"><a href="episode.html" class="anime-link"><img src="imgs/naruto.jpg"><h3>Naruto</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/bleach.jpeg"><h3>Bleach</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/demon slayer.jpg"><h3>Demon Slayer</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/onepiece.jpg"><h3>One Piece</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/DBZ.jpg"><h3>Dragon Ball Z</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/FMAB.jpg"><h3>FMAB</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/Slime incarnation.jpg"><h3>That time i reincarnated as a slime</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/overload.jpg"><h3>Overload</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/charlotte.jpg"><h3>Charlotte</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/parasyte.jpeg"><h3>Parasyte</h3></a></div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRow(this, 1)">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <h2></h2>
+      <div class="anime-wrapper">
+        <button class="scroll-btn left" onclick="scrollRow(this, -1)">&#10094;</button>
+        <div class="anime-row">
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/AOT.jpg"><h3>AOT</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/Chainsawman.jpg"><h3>Chainsaw Man</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/solo leveling.jpeg"><h3>Solo Leveling</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/windbreaker.jpg"><h3>Wind Breaker</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/promisednverland.jpeg"><h3>The Promised Neverland</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/fairytail.jpg"><h3>Fairy Tail</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/spyfamily.jpeg"><h3>The SpyxFamily</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/hajime no ippo.jpg"><h3>Hajime no Ippo</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/made in abyss.jpg"><h3>Made in Abyss</h3></a></div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRow(this, 1)">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <h2></h2>
+      <div class="anime-wrapper">
+        <button class="scroll-btn left" onclick="scrollRow(this, -1)">&#10094;</button>
+        <div class="anime-row">
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/assassinationclassroom.jpg"><h3>Assassination Classroom</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/Deathnote.jpg"><h3>Death Note</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/bluelock.jpg"><h3>Blue Lock</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/MHA.jpg"><h3>My Hero Academia</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/tokyo revengers.jpg"><h3>Tokyo Revengers</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/stein gate.jpg"><h3>stein's Gate</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/mobpsycho100.jpg"><h3>Mob Psycho 100</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/rezerro.jpg"><h3>Re:Zero</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/march comes in.jpg"><h3>March Comes in Like a Lion</h3></a></div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRow(this, 1)">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <h2></h2>
+      <div class="anime-wrapper">
+        <button class="scroll-btn left" onclick="scrollRow(this, -1)">&#10094;</button>
+        <div class="anime-row">
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/erased.jpg"><h3>Erased</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/another.jpg"><h3>Another</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/tokyo ghoul.jpg"><h3>Tokyo Ghoul</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/hunterxhunter.jpg"><h3>Hunter x Hunter</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/JK.jpg"><h3>Jujutsu Kaisen</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/berserk.jpg"><h3>Berserk</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/black clover.jpg"><h3>Black Clover</h3></a></div>
+          <div class="anime-card"><a href="#" class="anime-link"><img src="imgs/clanned.jpg"><h3>Clannad: After Story</h3></a></div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollRow(this, 1)">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2>About Anime<span>Xpress</span></h2>
+      <p>
+        AnimeXpress was built with a passion for anime and a vision to bring fans together in one place to explore, search, and enjoy their favorite titles. Whether you're into action-packed adventures, emotional dramas, or mysterious thrillers, there's something here for every otaku!
+      </p>
+      <p>
+        This project is developed and maintained by <strong>UJJWAL GUPTA</strong>, an anime enthusiast and aspiring web developer. AnimeXpress is a labor of love, designed to enhance your anime journey with a sleek interface and easy navigation.
+      </p>
+      <p>
+        Enjoy the ride and stay otaku!
+      </p>
+    </div>
+  </section>
+  
+  <script src="script.js">
+  </script>
+</body>
+</html>

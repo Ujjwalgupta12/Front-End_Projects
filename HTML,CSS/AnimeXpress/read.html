@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnimeXpress</title>
+  <link rel="stylesheet" href="manga.css" />
+</head>
+<body class="dark">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <a href="index.html">Home</a>
+    <a href="manga.html">Manga</a>
+    <a href="#">Genre</a>
+    <a href="#about">About Us</a>
+    <a href="Services.html">Services</a>
+  </div>
+  
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <button class="burger" onclick="toggleSidebar()">☰</button>
+    <h1 class="logo">Anime<span>Xpress</span></h1>
+    <input type="text" id="searchBar" placeholder="Search Anime..." />
+    <button class="toggle-mode" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Anime<span>Xpress</span></h2>
+      <p>your ultimate hub for everything anime!
+Discover trending titles, classic hits, top-rated gems, and short anime series all in one place. Whether you're a seasoned otaku or just starting your journey, AnimeXpress lets you explore, search, and enjoy anime like never before.</p>
+<p>Stream. Search. Stay Otaku.</p>
+    </div>
+  </section>
+
+  <!-- Manga Section -->
+  <section class="manga-reader">
+    <h2 id="chapter-title">Read Manga</h2>
+    <div class="manga-pages" id="mangaPages"></div>
+  
+    <div class="chapter-nav">
+      <button onclick="prevChapter()">« Previous</button>
+      <button onclick="nextChapter()">Next »</button>
+    </div>
+  </section>
+
+  <script>
+    let currentChapter = 1;
+    // Paths for the chapters (adjust paths as needed)
+    const chapters = {
+      1: [
+        "manga/AOT/Ch. 1 - Chapter 1/01.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/02.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/03.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/04.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/05.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/06.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/07.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/08.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/09.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/10.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/11.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/12.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/13.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/14.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/15.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/16.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/17.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/18.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/19.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/20.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/21.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/22.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/23.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/24.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/25.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/26.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/27.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/28.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/29.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/30.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/31.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/32.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/33.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/34.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/35.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/36.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/37.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/38.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/39.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/40.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/41.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/42.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/43.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/44.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/45.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/46.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/47.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/48.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/49.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/50.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/51.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/52.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/53.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/54.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/55.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/56.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/57.jpg",
+        "manga/AOT/Ch. 1 - Chapter 1/58.jpg"
+      ],
+      2: [
+        "manga/AOT/Ch. 2 - Chapter 2/01.jpg",
+        "manga/AOT/Ch. 2 - Chapter 2/02.jpg",
+        "manga/AOT/Ch. 2 - Chapter 2/03.jpg",
+        "manga/AOT/Ch. 2 - Chapter 2/04.jpg",
+        "manga/AOT/Ch. 2 - Chapter 2/05.jpg",
+        "manga/AOT/Ch. 2 - Chapter 2/06.jpg"
+        // Add more pages as needed
+      ]
+      // Add more chapters as needed
+    };
+
+    // Function to load manga pages
+    function loadChapter(chapterNumber) {
+      const mangaContainer = document.getElementById("mangaPages");
+      mangaContainer.innerHTML = "";  // Clear the container first
+
+      const pages = chapters[chapterNumber];
+      if (pages) {
+        pages.forEach(page => {
+          const imgElement = document.createElement("img");
+          imgElement.src = page;
+          imgElement.alt = "Manga page";
+          imgElement.loading = "lazy";  // Add lazy loading
+          mangaContainer.appendChild(imgElement);
+        });
+      } else {
+        alert("This chapter is not available.");
+      }
+    }
+
+    // Load the initial chapter
+    loadChapter(currentChapter);
+
+    // Functions for navigating between chapters
+    function nextChapter() {
+      if (chapters[currentChapter + 1]) {
+        currentChapter++;
+        loadChapter(currentChapter);
+      } else {
+        alert("No next chapter available.");
+      }
+    }
+
+    function prevChapter() {
+      if (chapters[currentChapter - 1]) {
+        currentChapter--;
+        loadChapter(currentChapter);
+      } else {
+        alert("No previous chapter available.");
+      }
+    }
+  </script>
+<script src="script.js"></script>
+</body>
+</html>
