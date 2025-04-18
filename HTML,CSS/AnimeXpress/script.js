@@ -124,7 +124,7 @@ if (searchBar && animeContainer) {
 const videoMap = {
   naruto: {
     1: "1HLNRaGh4y_jnH2Q3g-fG1SFSehAQdL3O", // Episode 1 file ID
-    2: "",
+    2: "1jVafYKBZdn8mQolM_p1x1MY2opcPEZSc",
   },
   // Add other anime mappings here if needed
 };
