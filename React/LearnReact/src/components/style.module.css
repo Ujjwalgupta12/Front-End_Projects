@@ -1,0 +1,56 @@
+/* .headerTitle{
+    font-size : 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aquamarine;
+}
+.mainwrapper{
+    padding:35px;
+    text-align: center;
+}
+.todoListWrapper{
+    gap:15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+} */
+
+
+
+/* style.module.css */
+
+/* style.module.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+}
+
+.headerTitle {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00bfa5;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.mainwrapper {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+}
+
+.todoListWrapper {
+    display: grid;
+    width: 100%;
+    max-width: 1400px; /* Optional: to control very wide screens */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
