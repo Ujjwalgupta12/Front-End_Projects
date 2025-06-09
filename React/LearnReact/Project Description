@@ -1,0 +1,11 @@
+This is a React-based Todo App built using Material-UI for sleek and responsive UI components. The app fetches a list of todos from a public API 
+(https://dummyjson.com/todos) and displays them in neatly organized cards with a consistent fixed size, ensuring a clean and uniform layout. 
+Users can click on each todo item’s "View Details" button to open a dialog showing more information about the selected todo.
+
+The project emphasizes:
+Modern React hooks (useState, useEffect) for state management and side effects.
+Material-UI components for a professional and responsive design.
+A fully responsive grid layout that adapts seamlessly across screen sizes.
+Clean UX with loading skeletons and error handling.
+Fixed-size todo cards for consistent visual structure.
+This project is a great example of integrating external APIs, managing asynchronous data fetching, and implementing Material-UI design best practices in React.
